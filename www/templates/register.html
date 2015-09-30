@@ -1,0 +1,17 @@
+<ion-view view-title="Register">
+    <ion-content scroll='false' class="padding login-content">
+        <form class="form-signin" role="form" name="regForm">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="email" name="email" ng-model="user.email" placeholder="Email Address">
+                </label>
+                <label class="item item-input">
+                    <input type="password" name="password" ng-model="user.password" placeholder="Password" ng-minlength="8">
+                </label>
+            </div>
+            <p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
+            <button class="button button-block button-green" ng-click="register()" ng-disabled="!user.email || !user.password">Register</button>
+        </form>
+        <div align=center><a class="login-links" ui-sref="login"> Back to login</a></div>
+    </ion-content>
+</ion-view>

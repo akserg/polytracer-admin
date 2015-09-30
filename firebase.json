@@ -1,0 +1,7 @@
+{
+  "firebase": "polytracer",
+  "public": "www",
+  "ignore": [
+    "**/.*"
+  ]
+}

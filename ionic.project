@@ -1,0 +1,13 @@
+{
+  "name": "polytracer-admin",
+  "app_id": "com.polytracer.admin",
+  "gulpStartupTasks": [
+    "sass",
+    "bower",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

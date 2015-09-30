@@ -1,0 +1,33 @@
+<ion-view view-title="Map">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-alert" menu-toggle="right">
+        </button>
+    </ion-nav-buttons>
+    <ion-content scroll='false'>
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
+
+    <ion-footer-bar class="bar bar-footer bar-balanced">
+        <div class="buttons" ng-click="toggleEditMode()">
+            <button class="button">
+                <i class="icon ion-grid"></i>
+            </button>
+        </div>
+        <div class="buttons" ng-if="editMode">
+            <button class="button" ng-click="deleteSelectedShape()">
+                <i class="icon ion-trash-a"></i>
+            </button>
+        </div>
+        <div class="buttons" ng-if="editMode">
+            <button class="button" ng-click="deleteAllShape()">
+                <i class="icon ion-trash-b"></i>
+            </button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button">Trips</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

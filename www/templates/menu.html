@@ -1,0 +1,59 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar>
+            <span class="title">
+                v0.10
+            </span>
+        </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div menu-close class="item item-avatar" href="#">
+                    <img ng-if="(user.avatar && user.avatar !== '')" ng-src="{{user.avatar}}" class="displayed" />
+                    <div>
+                        <h2>Hi {{user.first_name}}</h2>
+                        <p>Welcome to Polytracer</p>
+                    </div>
+                </div>
+
+                <a ng-if="user.loginWithPassword" menu-close class="item item-icon-right" href="#" ng-click="changePassword()">
+                    <i class="icon ion-person"></i> Change Password
+                </a>
+
+                <a menu-close class="item item-icon-right" href="#" ng-click="logout()">
+                    <i class="icon ion-log-out"></i> Logout
+                </a>
+
+            </div>
+        </ion-content>
+        <ion-footer-bar>
+            <span class="title">Copyright 2015, Polytracer.</span>
+        </ion-footer-bar>
+    </ion-side-menu>
+
+    <ion-side-menu side="right">
+        <ion-header-bar class="bar">
+            <span class="title">
+                Notifications
+            </span>
+        </ion-header-bar>
+
+        <ion-content class="bar-dark">
+            <div class="list">
+                <!-- Notifications -->
+                <a ng-repeat="notification in notifications" class="item item-icon-right" href="#"> <i class="icon ion-battery-low"></i> Battery low</a>
+            </div>
+        </ion-content>
+
+    </ion-side-menu>
+</ion-side-menus>

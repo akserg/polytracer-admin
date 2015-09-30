@@ -1,0 +1,19 @@
+<ion-view view-title="Devices">
+    <ion-nav-buttons side="secondary">
+        <button class="button button-icon ion-android-add" ng-click="addDevice()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list ng-if="devices.length > 0">
+            <ion-item ng-repeat="device in devices" class="item-icon-right" ng-click="select(device)">
+                {{device.name}}
+                <p>{{device.status}}</p>
+                <span class="icon" ng-if="device.notifications.length === 0"><i class="ion-android-alert" style="color: #d35400"></i></span>
+            </ion-item>
+        </ion-list>
+        <div class="card" ng-if="devices.length === 0">
+            <div class="item item-text-wrap">
+                No devices found.
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

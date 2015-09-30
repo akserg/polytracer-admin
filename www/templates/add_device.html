@@ -1,0 +1,18 @@
+<ion-view view-title="Add Device">
+    <ion-content scroll='false' class="padding">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" name="deviceName" ng-model="device.id" placeholder="Device Number">
+            </label>
+        </div>
+        
+        <div class="row">
+            <div class="col col-50">
+            	<button class="button button-block button-blue icon ion-camera" ng-click="scan($event)"></button>
+            </div>
+            <div class="col col-50">
+            	<button class="button button-block button-green" ng-click="addDevice($event)" ng-disabled="!device.id">Add</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

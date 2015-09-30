@@ -1,0 +1,13 @@
+<ion-view view-title="Forgot Password">
+    <ion-content scroll='false' class="padding login-content">
+        <form class="form-signin" role="form" name="forgotForm">
+            <div class="list">
+                <label class="item item-input">
+                    <input type="email" name="email" ng-model="user.email" placeholder="Email Address">
+                </label>
+            </div>
+            <button class="button button-block button-green" ng-click="resetPassword()" ng-disabled="!user.email">Send Email</button>
+        </form>
+        <div align=center><a class="login-links" ui-sref="login"> Back to login</a></div>
+    </ion-content>
+</ion-view>
